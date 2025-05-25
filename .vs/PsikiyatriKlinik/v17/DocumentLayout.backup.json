@@ -1,0 +1,97 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\galib\\Desktop\\PsikiyatriKlinik\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9F7DC3D4-23EC-4B31-8F6A-EEC2E51C4D74}|PsikiyatriKlinik\\PsikiyatriKlinik.csproj|c:\\users\\galib\\desktop\\psikiyatriklinik\\psikiyatriklinik\\controllers\\accountcontroller.cs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F7DC3D4-23EC-4B31-8F6A-EEC2E51C4D74}|PsikiyatriKlinik\\PsikiyatriKlinik.csproj|solutionrelative:psikiyatriklinik\\controllers\\accountcontroller.cs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F7DC3D4-23EC-4B31-8F6A-EEC2E51C4D74}|PsikiyatriKlinik\\PsikiyatriKlinik.csproj|c:\\users\\galib\\desktop\\psikiyatriklinik\\psikiyatriklinik\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9F7DC3D4-23EC-4B31-8F6A-EEC2E51C4D74}|PsikiyatriKlinik\\PsikiyatriKlinik.csproj|solutionrelative:psikiyatriklinik\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F7DC3D4-23EC-4B31-8F6A-EEC2E51C4D74}|PsikiyatriKlinik\\PsikiyatriKlinik.csproj|c:\\users\\galib\\desktop\\psikiyatriklinik\\psikiyatriklinik\\models\\doktorlistviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F7DC3D4-23EC-4B31-8F6A-EEC2E51C4D74}|PsikiyatriKlinik\\PsikiyatriKlinik.csproj|solutionrelative:psikiyatriklinik\\models\\doktorlistviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F7DC3D4-23EC-4B31-8F6A-EEC2E51C4D74}|PsikiyatriKlinik\\PsikiyatriKlinik.csproj|c:\\users\\galib\\desktop\\psikiyatriklinik\\psikiyatriklinik\\models\\doktorprofileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F7DC3D4-23EC-4B31-8F6A-EEC2E51C4D74}|PsikiyatriKlinik\\PsikiyatriKlinik.csproj|solutionrelative:psikiyatriklinik\\models\\doktorprofileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AccountController.cs.cs",
+              "DocumentMoniker": "C:\\Users\\galib\\Desktop\\PsikiyatriKlinik\\PsikiyatriKlinik\\Controllers\\AccountController.cs.cs",
+              "RelativeDocumentMoniker": "PsikiyatriKlinik\\Controllers\\AccountController.cs.cs",
+              "ToolTip": "C:\\Users\\galib\\Desktop\\PsikiyatriKlinik\\PsikiyatriKlinik\\Controllers\\AccountController.cs.cs",
+              "RelativeToolTip": "PsikiyatriKlinik\\Controllers\\AccountController.cs.cs",
+              "ViewState": "AgIAAHwAAAAAAAAAAAAQwDkAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T14:22:07.242Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\galib\\Desktop\\PsikiyatriKlinik\\PsikiyatriKlinik\\Views\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "PsikiyatriKlinik\\Views\\Account\\Register.cshtml",
+              "ToolTip": "C:\\Users\\galib\\Desktop\\PsikiyatriKlinik\\PsikiyatriKlinik\\Views\\Account\\Register.cshtml",
+              "RelativeToolTip": "PsikiyatriKlinik\\Views\\Account\\Register.cshtml",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAEsAAABaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-25T13:37:52.107Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DoktorListViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\galib\\Desktop\\PsikiyatriKlinik\\PsikiyatriKlinik\\Models\\DoktorListViewModel.cs",
+              "RelativeDocumentMoniker": "PsikiyatriKlinik\\Models\\DoktorListViewModel.cs",
+              "ToolTip": "C:\\Users\\galib\\Desktop\\PsikiyatriKlinik\\PsikiyatriKlinik\\Models\\DoktorListViewModel.cs",
+              "RelativeToolTip": "PsikiyatriKlinik\\Models\\DoktorListViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T13:31:06.578Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DoktorProfileViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\galib\\Desktop\\PsikiyatriKlinik\\PsikiyatriKlinik\\Models\\DoktorProfileViewModel.cs",
+              "RelativeDocumentMoniker": "PsikiyatriKlinik\\Models\\DoktorProfileViewModel.cs",
+              "ToolTip": "C:\\Users\\galib\\Desktop\\PsikiyatriKlinik\\PsikiyatriKlinik\\Models\\DoktorProfileViewModel.cs",
+              "RelativeToolTip": "PsikiyatriKlinik\\Models\\DoktorProfileViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T13:20:40.261Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

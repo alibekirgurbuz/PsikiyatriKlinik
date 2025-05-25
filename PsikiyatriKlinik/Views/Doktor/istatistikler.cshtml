@@ -1,0 +1,117 @@
+﻿@{
+    ViewData["Title"] = "İstatistikler";
+    Layout = "~/Views/Shared/_DoctorLayout.cshtml";
+}
+
+<div class="container-fluid px-4">
+    <h1 class="mt-4">İstatistikler</h1>
+    <div class="row">
+        <div class="col-xl-3 col-md-6">
+            <div class="card bg-primary text-white mb-4">
+                <div class="card-body">
+                    <h4>Toplam Hasta</h4>
+                    <h2>150</h2>
+                    <div class="small">Son 30 günde: +12</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-md-6">
+            <div class="card bg-warning text-white mb-4">
+                <div class="card-body">
+                    <h4>Aylık Randevu</h4>
+                    <h2>45</h2>
+                    <div class="small">Bu ay: 12 tamamlandı</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-md-6">
+            <div class="card bg-success text-white mb-4">
+                <div class="card-body">
+                    <h4>Aktif Tedavi</h4>
+                    <h2>75</h2>
+                    <div class="small">Son 7 günde: +5</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-md-6">
+            <div class="card bg-danger text-white mb-4">
+                <div class="card-body">
+                    <h4>Bekleyen Randevu</h4>
+                    <h2>8</h2>
+                    <div class="small">Bugün: 3 randevu</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xl-6">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <i class="fas fa-chart-bar me-1"></i>
+                    Aylık Randevu İstatistikleri
+                </div>
+                <div class="card-body">
+                    <canvas id="randevuChart" width="100%" height="40"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-6">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <i class="fas fa-chart-pie me-1"></i>
+                    Hasta Yaş Dağılımı
+                </div>
+                <div class="card-body">
+                    <canvas id="yasChart" width="100%" height="40"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // Randevu İstatistikleri Grafiği
+        var randevuCtx = document.getElementById('randevuChart').getContext('2d');
+        var randevuChart = new Chart(randevuCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran'],
+                datasets: [{
+                    label: 'Randevu Sayısı',
+                    data: [65, 59, 80, 81, 56, 55],
+                    backgroundColor: 'rgba(54, 162, 235, 0.5)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // Yaş Dağılımı Grafiği
+        var yasCtx = document.getElementById('yasChart').getContext('2d');
+        var yasChart = new Chart(yasCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['18-25', '26-35', '36-45', '46-55', '55+'],
+                datasets: [{
+                    data: [30, 25, 20, 15, 10],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.5)',
+                        'rgba(54, 162, 235, 0.5)',
+                        'rgba(255, 206, 86, 0.5)',
+                        'rgba(75, 192, 192, 0.5)',
+                        'rgba(153, 102, 255, 0.5)'
+                    ]
+                }]
+            }
+        });
+    </script>
+}
+

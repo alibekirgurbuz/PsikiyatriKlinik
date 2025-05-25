@@ -1,0 +1,72 @@
+﻿@{
+    ViewData["Title"] = "KisiselBilgilerim";
+    Layout = "~/Views/Shared/_HastaLayout.cshtml";
+}
+
+@model PsikiyatriKlinik.Models.ProfileViewModel
+
+<div class="container mt-5">
+    <h3>Kişisel Bilgilerim</h3>
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success">@TempData["SuccessMessage"]</div>
+    }
+
+    <form asp-action="KisiselBilgilerim" asp-controller="Hasta" method="post">
+        <input type="hidden" asp-for="Id" />
+
+        <div class="form-floating mb-3">
+            <input class="form-control" asp-for="Ad" placeholder="Ad" />
+            <label asp-for="Ad">Ad</label>
+            <span asp-validation-for="Ad" class="text-danger"></span>
+        </div>
+
+        <div class="form-floating mb-3">
+            <input class="form-control" asp-for="Soyad" placeholder="Soyad" />
+            <label asp-for="Soyad">Soyad</label>
+            <span asp-validation-for="Soyad" class="text-danger"></span>
+        </div>
+
+        <div class="form-floating mb-3">
+            <input class="form-control" asp-for="TcKimlikNo" placeholder="TC Kimlik No" />
+            <label asp-for="TcKimlikNo">TC Kimlik No</label>
+            <span asp-validation-for="TcKimlikNo" class="text-danger"></span>
+        </div>
+
+        <div class="form-floating mb-3">
+            <input class="form-control" asp-for="Telefon" placeholder="Telefon" />
+            <label asp-for="Telefon">Telefon</label>
+            <span asp-validation-for="Telefon" class="text-danger"></span>
+        </div>
+
+        <div class="form-floating mb-3">
+            <input class="form-control" asp-for="Email" placeholder="E-posta" />
+            <label asp-for="Email">E-posta</label>
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+
+        <div class="form-floating mb-3">
+            <input class="form-control" asp-for="DogumTarihi" type="date" />
+            <label asp-for="DogumTarihi">Doğum Tarihi</label>
+            <span asp-validation-for="DogumTarihi" class="text-danger"></span>
+        </div>
+
+        <div class="form-floating mb-3">
+            <input class="form-control" asp-for="Adres" placeholder="Adres" />
+            <label asp-for="Adres">Adres</label>
+        </div>
+
+        <div class="mt-3">
+            <button type="submit" class="btn btn-primary">Bilgileri Güncelle</button>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
+}
+
+
+

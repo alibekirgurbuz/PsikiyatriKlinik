@@ -1,0 +1,56 @@
+﻿@{
+    ViewData["Title"] = "HastaProfilleri";
+    Layout = "~/Views/Shared/_DoctorLayout.cshtml";
+    var profiller = ViewBag.HastaProfilleri as IEnumerable<dynamic>;
+}
+
+<div class="container-fluid px-4">
+    <h1 class="mt-4">Hasta Profilleri</h1>
+    <div class="card mb-4">
+        <div class="card-header">
+            <i class="fas fa-user-md me-1"></i>
+            Hasta Detaylı Profilleri
+        </div>
+        <div class="card-body">
+            <div class="row">
+                @if (profiller != null && profiller.Any())
+                {
+                    foreach (var hasta in profiller)
+                    {
+                        int yas = hasta.DogumTarihi != null ? (int)((DateTime.Now - (DateTime)hasta.DogumTarihi).TotalDays / 365.25) : 0;
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <i class="fas fa-user-circle fa-3x me-3"></i>
+                                        <div>
+                                            <h5 class="card-title mb-0">@hasta.Ad @hasta.Soyad</h5>
+                                            <small class="text-muted">Hasta ID: @hasta.HastaId</small>
+                                        </div>
+                                    </div>
+                                    <p class="card-text">
+                                        <strong>Yaş:</strong> @(yas > 0 ? yas.ToString() : "-")<br>
+                                        <strong>Cinsiyet:</strong> @hasta.Cinsiyet<br>
+                                        <strong>Son Görüşme:</strong> @(((DateTime?)hasta.SonRandevu)?.ToString("dd.MM.yyyy") ?? "-")<br>
+                                        <strong>Durum:</strong> <span class="badge bg-@((hasta.Durum == "Onaylandı") ? "success" : (hasta.Durum == "Beklemede" ? "warning" : "info"))">@hasta.Durum</span>
+                                    </p>
+                                    <div class="d-flex justify-content-between">
+                                        <a href="#" class="btn btn-primary btn-sm">Detaylı Görüntüle</a>
+                                        <a href="#" class="btn btn-info btn-sm">Dosya Görüntüle</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+                else
+                {
+                    <div class="col-12">
+                        <div class="alert alert-info">Bu doktordan randevu almış hasta bulunamadı.</div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+

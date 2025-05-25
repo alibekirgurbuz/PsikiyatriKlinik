@@ -1,0 +1,153 @@
+﻿@{
+    ViewData["Title"] = "Ilaclar";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container-fluid px-4">
+    <h1 class="mt-4">İlaçlar</h1>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item active">İlaç Listesi</li>
+    </ol>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <i class="fas fa-table me-1"></i>
+            İlaç Listesi
+            <button class="btn btn-primary float-end" data-bs-toggle="modal" data-bs-target="#addMedicineModal">
+                <i class="fas fa-plus"></i> Yeni İlaç Ekle
+            </button>
+        </div>
+        <div class="card-body">
+            <table id="medicinesTable" class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>İlaç Adı</th>
+                        <th>İlaç Türü</th>
+                        <th>Reçetede Yazılma Sayısı</th>
+                        <th>Stok Durumu</th>
+                        <th>İşlemler</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Prozac</td>
+                        <td>Antidepresan</td>
+                        <td>150</td>
+                        <td><span class="badge bg-success">Stokta</span></td>
+                        <td>
+                            <button class="btn btn-sm btn-primary" title="Düzenle">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="btn btn-sm btn-danger" title="Sil">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Xanax</td>
+                        <td>Anksiyolitik</td>
+                        <td>120</td>
+                        <td><span class="badge bg-warning">Az Stok</span></td>
+                        <td>
+                            <button class="btn btn-sm btn-primary" title="Düzenle">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="btn btn-sm btn-danger" title="Sil">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Zoloft</td>
+                        <td>Antidepresan</td>
+                        <td>85</td>
+                        <td><span class="badge bg-success">Stokta</span></td>
+                        <td>
+                            <button class="btn btn-sm btn-primary" title="Düzenle">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="btn btn-sm btn-danger" title="Sil">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Risperdal</td>
+                        <td>Antipsikotik</td>
+                        <td>65</td>
+                        <td><span class="badge bg-danger">Stok Yok</span></td>
+                        <td>
+                            <button class="btn btn-sm btn-primary" title="Düzenle">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="btn btn-sm btn-danger" title="Sil">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- Yeni İlaç Ekleme Modal -->
+<div class="modal fade" id="addMedicineModal" tabindex="-1" aria-labelledby="addMedicineModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addMedicineModalLabel">Yeni İlaç Ekle</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="medicineName" class="form-label">İlaç Adı</label>
+                        <input type="text" class="form-control" id="medicineName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="medicineType" class="form-label">İlaç Türü</label>
+                        <select class="form-select" id="medicineType" required>
+                            <option value="">İlaç Türü Seçin</option>
+                            <option value="Antidepresan">Antidepresan</option>
+                            <option value="Anksiyolitik">Anksiyolitik</option>
+                            <option value="Antipsikotik">Antipsikotik</option>
+                            <option value="Mood Stabilizer">Mood Stabilizer</option>
+                            <option value="Antikonvülzan">Antikonvülzan</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="medicineStock" class="form-label">Stok Miktarı</label>
+                        <input type="number" class="form-control" id="medicineStock" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="medicineDescription" class="form-label">Açıklama</label>
+                        <textarea class="form-control" id="medicineDescription" rows="3"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">İptal</button>
+                <button type="button" class="btn btn-primary">Kaydet</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function() {
+            $('#medicinesTable').DataTable({
+                language: {
+                    url: '//cdn.datatables.net/plug-ins/1.13.7/i18n/tr.json'
+                },
+                responsive: true,
+                dom: 'Bfrtip',
+                buttons: [
+                    'copy', 'excel', 'pdf', 'print'
+                ]
+            });
+        });
+    </script>
+}
+

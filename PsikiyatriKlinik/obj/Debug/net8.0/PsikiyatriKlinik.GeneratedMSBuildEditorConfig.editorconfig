@@ -1,0 +1,161 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = PsikiyatriKlinik
+build_property.RootNamespace = PsikiyatriKlinik
+build_property.ProjectDir = C:\Users\galib\Desktop\PsikiyatriKlinik\PsikiyatriKlinik\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\galib\Desktop\PsikiyatriKlinik\PsikiyatriKlinik
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/galib/Desktop/PsikiyatriKlinik/PsikiyatriKlinik/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/galib/Desktop/PsikiyatriKlinik/PsikiyatriKlinik/Views/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/galib/Desktop/PsikiyatriKlinik/PsikiyatriKlinik/Views/Admin/AdminScreen.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5TY3JlZW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/galib/Desktop/PsikiyatriKlinik/PsikiyatriKlinik/Views/Admin/Doktorlar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRG9rdG9ybGFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/galib/Desktop/PsikiyatriKlinik/PsikiyatriKlinik/Views/Admin/GoToGoogle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cR29Ub0dvb2dsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/galib/Desktop/PsikiyatriKlinik/PsikiyatriKlinik/Views/Admin/Hastalar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSGFzdGFsYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/galib/Desktop/PsikiyatriKlinik/PsikiyatriKlinik/Views/Admin/Ilaclar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSWxhY2xhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/galib/Desktop/PsikiyatriKlinik/PsikiyatriKlinik/Views/Admin/Istatistikler.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSXN0YXRpc3Rpa2xlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/galib/Desktop/PsikiyatriKlinik/PsikiyatriKlinik/Views/Admin/Randevular.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUmFuZGV2dWxhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/galib/Desktop/PsikiyatriKlinik/PsikiyatriKlinik/Views/Doktor/DoctorScreen.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9rdG9yXERvY3RvclNjcmVlbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/galib/Desktop/PsikiyatriKlinik/PsikiyatriKlinik/Views/Doktor/GecmisRandevular.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9rdG9yXEdlY21pc1JhbmRldnVsYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/galib/Desktop/PsikiyatriKlinik/PsikiyatriKlinik/Views/Doktor/GelenKutusu.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9rdG9yXEdlbGVuS3V0dXN1LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/galib/Desktop/PsikiyatriKlinik/PsikiyatriKlinik/Views/Doktor/Hastalarım.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9rdG9yXEhhc3RhbGFyxLFtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/galib/Desktop/PsikiyatriKlinik/PsikiyatriKlinik/Views/Doktor/HastaProfilleri.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9rdG9yXEhhc3RhUHJvZmlsbGVyaS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/galib/Desktop/PsikiyatriKlinik/PsikiyatriKlinik/Views/Doktor/istatistikler.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9rdG9yXGlzdGF0aXN0aWtsZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/galib/Desktop/PsikiyatriKlinik/PsikiyatriKlinik/Views/Doktor/Profil.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9rdG9yXFByb2ZpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/galib/Desktop/PsikiyatriKlinik/PsikiyatriKlinik/Views/Doktor/RandevulariDuzenle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9rdG9yXFJhbmRldnVsYXJpRHV6ZW5sZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/galib/Desktop/PsikiyatriKlinik/PsikiyatriKlinik/Views/Doktor/TerapiGecmisi.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9rdG9yXFRlcmFwaUdlY21pc2kuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/galib/Desktop/PsikiyatriKlinik/PsikiyatriKlinik/Views/Hasta/HastaScreen.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFzdGFcSGFzdGFTY3JlZW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/galib/Desktop/PsikiyatriKlinik/PsikiyatriKlinik/Views/Hasta/Ilaclarim.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFzdGFcSWxhY2xhcmltLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/galib/Desktop/PsikiyatriKlinik/PsikiyatriKlinik/Views/Hasta/KisiselBilgilerim.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFzdGFcS2lzaXNlbEJpbGdpbGVyaW0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/galib/Desktop/PsikiyatriKlinik/PsikiyatriKlinik/Views/Hasta/Odemelerim.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFzdGFcT2RlbWVsZXJpbS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/galib/Desktop/PsikiyatriKlinik/PsikiyatriKlinik/Views/Hasta/Randevularim.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFzdGFcUmFuZGV2dWxhcmltLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/galib/Desktop/PsikiyatriKlinik/PsikiyatriKlinik/Views/Hasta/TerapiGecmisim.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFzdGFcVGVyYXBpR2VjbWlzaW0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/galib/Desktop/PsikiyatriKlinik/PsikiyatriKlinik/Views/Home/NotFound.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxOb3RGb3VuZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/galib/Desktop/PsikiyatriKlinik/PsikiyatriKlinik/Views/Home/Password.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/galib/Desktop/PsikiyatriKlinik/PsikiyatriKlinik/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/galib/Desktop/PsikiyatriKlinik/PsikiyatriKlinik/Views/Shared/_DoctorLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Eb2N0b3JMYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/galib/Desktop/PsikiyatriKlinik/PsikiyatriKlinik/Views/Shared/_HastaLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9IYXN0YUxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/galib/Desktop/PsikiyatriKlinik/PsikiyatriKlinik/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/galib/Desktop/PsikiyatriKlinik/PsikiyatriKlinik/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/galib/Desktop/PsikiyatriKlinik/PsikiyatriKlinik/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/galib/Desktop/PsikiyatriKlinik/PsikiyatriKlinik/Views/Shared/_AdminLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZG1pbkxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = b-87k4vksxon

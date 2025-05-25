@@ -1,0 +1,121 @@
+﻿@{
+    ViewData["Title"] = "Hastalarım";
+    Layout = "~/Views/Shared/_DoctorLayout.cshtml";
+    var hastalar = ViewBag.Hastalar as IEnumerable<dynamic>;
+}
+
+<div class="container-fluid px-4">
+    <h1 class="mt-4">Hastalarım</h1>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item active">Dashboard</li>
+    </ol>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <i class="fas fa-table me-1"></i>
+            Hasta Listesi
+        </div>
+        <div class="card-body">
+            <table id="hastalarTable" class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>Hasta ID</th>
+                        <th>Ad</th>
+                        <th>Soyad</th>
+                        <th>Yaş</th>
+                        <th>Cinsiyet</th>
+                        <th>Son Randevu</th>
+                        <th>Son Randevu Saati</th>
+                        <th>Durum</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (hastalar != null)
+                    {
+                        foreach (var hasta in hastalar)
+                        {
+                            int yas = hasta.DogumTarihi != null ? (int)((DateTime.Now - (DateTime)hasta.DogumTarihi).TotalDays / 365.25) : 0;
+                            <tr>
+                                <td>@hasta.HastaId</td>
+                                <td>@hasta.Ad</td>
+                                <td>@hasta.Soyad</td>
+                                <td>@(yas > 0 ? yas.ToString() : "-")</td>
+                                <td>@hasta.Cinsiyet</td>
+                                <td>@(((DateTime?)hasta.SonRandevu)?.ToString("dd.MM.yyyy") ?? "-")</td>
+                                <td>@(hasta.SonRandevuSaati != null ? ((TimeSpan)hasta.SonRandevuSaati).ToString("hh\\:mm") : "-")</td>
+                                <td><span class="badge bg-@((hasta.Durum == "Onaylandı") ? "success" : (hasta.Durum == "Beklemede" ? "warning" : "info"))">@hasta.Durum</span></td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- Profil Modal -->
+<div class="modal fade" id="profilModal" tabindex="-1" aria-labelledby="profilModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="profilModalLabel">Hasta Profili</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
+            </div>
+            <div class="modal-body">
+                <div class="card">
+                    <div class="card-body">
+                        <p><strong>Ad:</strong> <span id="modalAd"></span></p>
+                        <p><strong>Soyad:</strong> <span id="modalSoyad"></span></p>
+                        <p><strong>Yaş:</strong> <span id="modalYas"></span></p>
+                        <p><strong>Telefon:</strong> <span id="modalTelefon"></span></p>
+                        <p><strong>Email:</strong> <span id="modalEmail"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function() {
+            $('#hastalarTable').DataTable({
+                "language": {
+                    "url": "//cdn.datatables.net/plug-ins/1.13.7/i18n/tr.json"
+                },
+                "responsive": true,
+                "dom": 'Bfrtip',
+                "buttons": [
+                    'copy', 'excel', 'pdf', 'print'
+                ],
+                "order": [[0, 'asc']],
+                "pageLength": 10,
+                "searching": true,
+                "info": true,
+                "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "Tümü"]]
+            });
+
+            var hastaModalData = null;
+            $('#hastalarTable').on('click', 'button[data-bs-toggle="modal"]', function () {
+                hastaModalData = {
+                    ad: $(this).data('ad'),
+                    soyad: $(this).data('soyad'),
+                    yas: $(this).data('yas'),
+                    telefon: $(this).data('telefon'),
+                    email: $(this).data('email')
+                };
+            });
+
+            $('#profilModal').on('show.bs.modal', function () {
+                if (hastaModalData) {
+                    $('#modalAd').text(hastaModalData.ad);
+                    $('#modalSoyad').text(hastaModalData.soyad);
+                    $('#modalYas').text(hastaModalData.yas);
+                    $('#modalTelefon').text(hastaModalData.telefon);
+                    $('#modalEmail').text(hastaModalData.email);
+                }
+            });
+        });
+    </script>
+}
+

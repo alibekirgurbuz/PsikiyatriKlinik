@@ -1,0 +1,112 @@
+﻿
+@{
+    ViewData["Title"] = "GelenKutusu";
+    Layout = "~/Views/Shared/_DoctorLayout.cshtml";
+}
+
+<div class="container-fluid px-4">
+    <h1 class="mt-4">Gelen Kutusu</h1>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <i class="fas fa-folder me-1"></i>
+                    Klasörler
+                </div>
+                <div class="list-group list-group-flush">
+                    <a href="#" class="list-group-item list-group-item-action active">
+                        <i class="fas fa-inbox me-2"></i> Gelen Kutusu
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <i class="fas fa-paper-plane me-2"></i> Gönderilen
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <i class="fas fa-star me-2"></i> Önemli
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <i class="fas fa-trash me-2"></i> Çöp Kutusu
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <i class="fas fa-envelope me-1"></i>
+                    Mesajlar
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th style="width: 40px">
+                                        <input type="checkbox" class="form-check-input">
+                                    </th>
+                                    <th style="width: 40px">
+                                        <i class="fas fa-star text-warning"></i>
+                                    </th>
+                                    <th>Gönderen</th>
+                                    <th>Konu</th>
+                                    <th>Tarih</th>
+                                    <th>İşlemler</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" class="form-check-input">
+                                    </td>
+                                    <td>
+                                        <i class="fas fa-star text-warning"></i>
+                                    </td>
+                                    <td>Ahmet Yılmaz</td>
+                                    <td>Randevu Talebi</td>
+                                    <td>15.03.2024</td>
+                                    <td>
+                                        <button class="btn btn-sm btn-primary">Oku</button>
+                                        <button class="btn btn-sm btn-danger">Sil</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" class="form-check-input">
+                                    </td>
+                                    <td>
+                                        <i class="far fa-star"></i>
+                                    </td>
+                                    <td>Ayşe Demir</td>
+                                    <td>İlaç Bilgisi</td>
+                                    <td>14.03.2024</td>
+                                    <td>
+                                        <button class="btn btn-sm btn-primary">Oku</button>
+                                        <button class="btn btn-sm btn-danger">Sil</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" class="form-check-input">
+                                    </td>
+                                    <td>
+                                        <i class="far fa-star"></i>
+                                    </td>
+                                    <td>Mehmet Kaya</td>
+                                    <td>Terapi Notları</td>
+                                    <td>13.03.2024</td>
+                                    <td>
+                                        <button class="btn btn-sm btn-primary">Oku</button>
+                                        <button class="btn btn-sm btn-danger">Sil</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <button class="btn btn-primary">
+                        <i class="fas fa-pen me-1"></i> Yeni Mesaj
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

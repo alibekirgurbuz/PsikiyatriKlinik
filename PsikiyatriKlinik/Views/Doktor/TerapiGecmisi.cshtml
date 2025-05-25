@@ -1,0 +1,99 @@
+﻿
+@{
+    ViewData["Title"] = "TerapiGecmisi";
+    Layout = "~/Views/Shared/_DoctorLayout.cshtml";
+}
+
+<div class="container-fluid px-4">
+    <h1 class="mt-4">Terapi Geçmişi</h1>
+    <div class="card mb-4">
+        <div class="card-header">
+            <i class="fas fa-chart-area me-1"></i>
+            Terapi Kayıtları
+        </div>
+        <div class="card-body">
+            <div class="row mb-3">
+                <div class="col-md-3">
+                    <select class="form-select">
+                        <option value="">Tüm Hastalar</option>
+                        <option value="1">Ahmet Yılmaz</option>
+                        <option value="2">Ayşe Demir</option>
+                        <option value="3">Mehmet Kaya</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <input type="date" class="form-control" placeholder="Başlangıç Tarihi">
+                </div>
+                <div class="col-md-3">
+                    <input type="date" class="form-control" placeholder="Bitiş Tarihi">
+                </div>
+                <div class="col-md-3">
+                    <button class="btn btn-primary w-100">Filtrele</button>
+                </div>
+            </div>
+            <div class="timeline">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h5 class="card-title mb-0">Ahmet Yılmaz</h5>
+                            <small class="text-muted">15.03.2024</small>
+                        </div>
+                        <p class="card-text">
+                            <strong>Terapi Notları:</strong><br>
+                            Hasta durumu stabil. İlaç kullanımı düzenli. Yeni egzersiz programı başlatıldı.
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <small class="text-muted">Süre: 45 dakika</small>
+                            <div>
+                                <button class="btn btn-sm btn-info">Detay</button>
+                                <button class="btn btn-sm btn-primary">Düzenle</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h5 class="card-title mb-0">Ayşe Demir</h5>
+                            <small class="text-muted">10.03.2024</small>
+                        </div>
+                        <p class="card-text">
+                            <strong>Terapi Notları:</strong><br>
+                            İyileşme gözlemlendi. Yeni ilaç programı uygulandı. Hasta memnuniyeti yüksek.
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <small class="text-muted">Süre: 45 dakika</small>
+                            <div>
+                                <button class="btn btn-sm btn-info">Detay</button>
+                                <button class="btn btn-sm btn-primary">Düzenle</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h5 class="card-title mb-0">Mehmet Kaya</h5>
+                            <small class="text-muted">05.03.2024</small>
+                        </div>
+                        <p class="card-text">
+                            <strong>Terapi Notları:</strong><br>
+                            Yeni tedavi planı oluşturuldu. İlaç dozları güncellendi. Hasta takibi devam ediyor.
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <small class="text-muted">Süre: 45 dakika</small>
+                            <div>
+                                <button class="btn btn-sm btn-info">Detay</button>
+                                <button class="btn btn-sm btn-primary">Düzenle</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-primary">
+                <i class="fas fa-plus me-1"></i> Yeni Terapi Kaydı
+            </button>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,105 @@
+﻿@{
+    ViewData["Title"] = "DoktorScreen";
+    Layout = "~/Views/Shared/_DoctorLayout.cshtml";
+}
+
+<div class="container-fluid px-5 py-3">
+    <h1 class="mt-2 text-center">Doktor Takvimi</h1>
+    <ol class="breadcrumb mb-3 justify-content-center">
+        <li class="breadcrumb-item active">Randevu Takvimi</li>
+    </ol>
+    
+    <div class="row justify-content-center">
+        <div class="col-xl-10 col-lg-11">
+            <div class="card mb-4 shadow">
+                <div class="card-header text-center">
+                    <i class="fas fa-calendar me-1"></i>
+                    Randevularım
+                </div>
+                <div class="card-body p-4">
+                    <div id="calendar-container" class="d-flex justify-content-center">
+                        <div id="calendar" style="max-width: 100%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <!-- FullCalendar JS kütüphanesi -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/locales/tr.js"></script>
+    
+    <style>
+        #calendar-container {
+            width: 100%;
+        }
+        #calendar {
+            width: 100%;
+            margin: 0 auto;
+        }
+        /* Takvim içeriğini daha küçük göstermek için */
+        .fc-daygrid-day-frame {
+            min-height: 70px !important;
+        }
+        .fc-col-header-cell {
+            padding: 5px !important;
+        }
+    </style>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth',
+                locale: 'tr',
+                height: 'auto',
+                contentHeight: 450,
+                aspectRatio: 1.7,
+                headerToolbar: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'dayGridMonth,timeGridWeek,timeGridDay'
+                },
+                events: [
+                    // Örnek randevular - Gerçek veriler veritabanından gelebilir
+                    {
+                        title: 'Ahmet Yılmaz ile Görüşme',
+                        start: '2023-05-12T10:00:00',
+                        end: '2023-05-12T11:30:00'
+                    },
+                    {
+                        title: 'Zeynep Kaya ile Görüşme',
+                        start: '2023-05-14T14:30:00',
+                        end: '2023-05-14T16:00:00'
+                    },
+                    {
+                        title: 'Murat Demir ile Görüşme',
+                        start: '2023-05-17T09:00:00',
+                        end: '2023-05-17T10:00:00'
+                    }
+                ],
+                eventClick: function(info) {
+                    alert('Randevu: ' + info.event.title);
+                    // Burada randevu detayları için bir modal açılabilir
+                },
+                editable: true,
+                selectable: true,
+                select: function(info) {
+                    alert('Seçilen tarih: ' + info.startStr);
+                    // Burada yeni randevu ekleme modalı açılabilir
+                }
+            });
+            calendar.render();
+            
+            // Sidebar toggle olduğunda takvim boyutunu ayarla
+            document.getElementById('sidebarToggle').addEventListener('click', function() {
+                setTimeout(function() {
+                    calendar.updateSize();
+                }, 300); // Animasyon tamamlanması için biraz bekle
+            });
+        });
+    </script>
+}

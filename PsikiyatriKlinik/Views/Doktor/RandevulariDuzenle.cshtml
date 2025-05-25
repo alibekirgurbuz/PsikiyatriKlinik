@@ -1,0 +1,92 @@
+﻿@{
+    ViewData["Title"] = "RandevulariDuzenle";
+    Layout = "~/Views/Shared/_DoctorLayout.cshtml";
+    var randevular = ViewBag.Randevular as IEnumerable<dynamic>;
+}
+
+<div class="container-fluid px-4">
+    <h1 class="mt-4">Randevuları Düzenle</h1>
+    <div class="card mb-4">
+        <div class="card-header">
+            <i class="fas fa-calendar-check me-1"></i>
+            Randevu Listesi
+        </div>
+        <div class="card-body">
+            <div class="row mb-3">
+                <div class="col-md-3">
+                    <input type="date" class="form-control" placeholder="Tarih Seçin">
+                </div>
+                <div class="col-md-3">
+                    <select class="form-select">
+                        <option value="">Tüm Durumlar</option>
+                        <option value="beklemede">Beklemede</option>
+                        <option value="onaylandi">Onaylandı</option>
+                        <option value="iptal">İptal Edildi</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <input type="text" class="form-control" placeholder="Hasta Ara...">
+                </div>
+                <div class="col-md-3">
+                    <button class="btn btn-primary w-100">Filtrele</button>
+                </div>
+            </div>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Tarih</th>
+                        <th>Saat</th>
+                        <th>Hasta</th>
+                        <th>Durum</th>
+                        <th>İşlemler</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (randevular != null && randevular.Any())
+                    {
+                        foreach (var r in randevular)
+                        {
+                            <tr>
+                                <td>@(((DateTime)r.Tarih).ToString("dd.MM.yyyy"))</td>
+                                <td>@(((TimeSpan)r.Saat).ToString("hh\\:mm"))</td>
+                                <td>@r.HastaAdSoyad</td>
+                                <td>
+                                    <span class="badge bg-@((r.Durum == "Onaylandı") ? "success" : (r.Durum == "Beklemede" ? "warning" : (r.Durum == "İptal Edildi" ? "danger" : "secondary")))">
+                                        @r.Durum
+                                    </span>
+                                </td>
+                                <td>
+                                    <div class="d-flex gap-1">
+                                        @if (r.Durum != "Onaylandı")
+                                        {
+                                            <form asp-action="RandevuDurumGuncelle" asp-controller="Doktor" method="post" style="display:inline;">
+                                                <input type="hidden" name="id" value="@r.RandevuId" />
+                                                <input type="hidden" name="yeniDurum" value="Onaylandı" />
+                                                <button type="submit" class="btn btn-success btn-sm">Onayla</button>
+                                            </form>
+                                        }
+                                        @if (r.Durum != "İptal Edildi")
+                                        {
+                                            <form asp-action="RandevuDurumGuncelle" asp-controller="Doktor" method="post" style="display:inline;">
+                                                <input type="hidden" name="id" value="@r.RandevuId" />
+                                                <input type="hidden" name="yeniDurum" value="İptal Edildi" />
+                                                <button type="submit" class="btn btn-danger btn-sm">İptal Et</button>
+                                            </form>
+                                        }
+                                        <button class="btn btn-info btn-sm">Düzenle</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr><td colspan="5" class="text-center">Kayıtlı randevu yok.</td></tr>
+                    }
+                </tbody>
+            </table>
+            <button class="btn btn-primary">Yeni Randevu Ekle</button>
+        </div>
+    </div>
+</div>
+

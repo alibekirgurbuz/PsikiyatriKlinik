@@ -1,0 +1,166 @@
+﻿@{
+    ViewData["Title"] = "Randevularim";
+    Layout = "~/Views/Shared/_HastaLayout.cshtml";
+}
+@model PsikiyatriKlinik.Models.RandevuViewModel
+@{
+    var randevular = ViewBag.Randevular as List<PsikiyatriKlinik.Models.RandevuViewModel>;
+    var doktorlar = ViewBag.Doktorlar as List<PsikiyatriKlinik.Models.Doktor>;
+    var bugun = DateTime.Now.ToString("yyyy-MM-dd");
+}
+
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">@TempData["SuccessMessage"]</div>
+}
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger">@TempData["ErrorMessage"]</div>
+}
+
+@if (!ViewData.ModelState.IsValid)
+{
+    <div class="alert alert-warning">
+        <strong>ModelState Hataları:</strong>
+        <ul>
+            @foreach (var modelError in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+            {
+                <li>@modelError.ErrorMessage</li>
+            }
+        </ul>
+    </div>
+}
+
+<div class="row mt-4">
+    <!-- Randevu Listesi -->
+    <div class="col-md-7">
+        <h4>Randevu Listesi</h4>
+        <div class="row">
+            @if (randevular != null && randevular.Count > 0)
+            {
+                foreach (var randevu in randevular)
+                {
+                    <div class="col-md-6 mb-3">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title">@randevu.DoktorAdi</h5>
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="fas fa-calendar-alt text-primary me-2"></i>
+                                    <span>@randevu.RandevuTarihi.ToString("dd/MM/yyyy")</span>
+                                </div>
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="fas fa-clock text-primary me-2"></i>
+                                    <span>@randevu.RandevuSaati.ToString(@"hh\:mm")</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="badge bg-@(randevu.RandevuDurumu == "Onaylandı" ? "success" : 
+                                                         randevu.RandevuDurumu == "İptal Edildi" ? "danger" : "warning")">
+                                        @randevu.RandevuDurumu
+                                    </span>
+                                    <form asp-action="RandevuSil" asp-controller="Hasta" method="post" style="display:inline;">
+                                        <input type="hidden" name="id" value="@randevu.Id" />
+                                        <button type="submit" class="btn btn-sm btn-outline-danger">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                <div class="col-12">
+                    <div class="alert alert-info">
+                        <i class="fas fa-info-circle me-2"></i>
+                        Henüz bir randevunuz yok.
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+    <!-- Randevu Oluştur -->
+    <div class="col-md-5">
+        <div class="card shadow-sm">
+            <div class="card-header bg-primary text-white">
+                <h4 class="mb-0">Yeni Randevu Oluştur</h4>
+            </div>
+            <div class="card-body">
+                <form asp-action="RandevuOlusturGuncelle" asp-controller="Hasta" method="post">
+                    <input type="hidden" asp-for="Id" />
+
+                    <div class="form-floating mb-3">
+                        <select class="form-select" asp-for="DoktorId" id="doktorSelect">
+                            <option value="">Doktor Seçin</option>
+                            @foreach (var doktor in doktorlar)
+                            {
+                                <option value="@doktor.Id">@doktor.Ad @doktor.Soyad</option>
+                            }
+                        </select>
+                        <label asp-for="DoktorId">Doktor</label>
+                        <span asp-validation-for="DoktorId" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input class="form-control" asp-for="RandevuTarihi" type="date" value="@bugun" id="randevuTarihi" />
+                        <label asp-for="RandevuTarihi">Randevu Tarihi</label>
+                        <span asp-validation-for="RandevuTarihi" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <select class="form-select" asp-for="RandevuSaati" id="randevuSaati">
+                            <option value="">Saat Seçin</option>
+                            @for (int hour = 9; hour <= 17; hour++)
+                            {
+                                <option value="@(new TimeSpan(hour, 0, 0))">@hour:00</option>
+                                <option value="@(new TimeSpan(hour, 30, 0))">@hour:30</option>
+                            }
+                        </select>
+                        <label asp-for="RandevuSaati">Randevu Saati</label>
+                        <span asp-validation-for="RandevuSaati" class="text-danger"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100">
+                        <i class="fas fa-calendar-plus me-2"></i>
+                        Randevu Oluştur
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+        $(document).ready(function() {
+            // Doktor seçilmeden tarih ve saat seçilemez
+            $('#randevuTarihi, #randevuSaati').prop('disabled', true);
+            
+            $('#doktorSelect').change(function() {
+                if ($(this).val()) {
+                    $('#randevuTarihi').prop('disabled', false);
+                } else {
+                    $('#randevuTarihi').prop('disabled', true);
+                    $('#randevuSaati').prop('disabled', true);
+                }
+            });
+
+            $('#randevuTarihi').change(function() {
+                if ($(this).val()) {
+                    $('#randevuSaati').prop('disabled', false);
+                } else {
+                    $('#randevuSaati').prop('disabled', true);
+                }
+            });
+        });
+    </script>
+}
+
+
+
+
+
