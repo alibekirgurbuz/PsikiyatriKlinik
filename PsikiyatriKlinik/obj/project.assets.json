@@ -7776,11 +7776,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\galib\\Desktop\\PsikiyatriKlinik\\PsikiyatriKlinik\\PsikiyatriKlinik.csproj",
+      "projectUniqueName": "C:\\Users\\galib\\Source\\Repos\\PsikiyatriKlinik\\PsikiyatriKlinik\\PsikiyatriKlinik.csproj",
       "projectName": "PsikiyatriKlinik",
-      "projectPath": "C:\\Users\\galib\\Desktop\\PsikiyatriKlinik\\PsikiyatriKlinik\\PsikiyatriKlinik.csproj",
+      "projectPath": "C:\\Users\\galib\\Source\\Repos\\PsikiyatriKlinik\\PsikiyatriKlinik\\PsikiyatriKlinik.csproj",
       "packagesPath": "C:\\Users\\galib\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\galib\\Desktop\\PsikiyatriKlinik\\PsikiyatriKlinik\\obj\\",
+      "outputPath": "C:\\Users\\galib\\Source\\Repos\\PsikiyatriKlinik\\PsikiyatriKlinik\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
