@@ -2,6 +2,7 @@ wwwroot/** linguist-vendored
 lib/** linguist-vendored
 *.min.js linguist-vendored
 *.min.css linguist-vendored
+**/*.cshtml linguist-vendored
 wwwroot/**/*.html linguist-vendored
 lib/**/*.html linguist-vendored
 public/**/*.html linguist-vendored
