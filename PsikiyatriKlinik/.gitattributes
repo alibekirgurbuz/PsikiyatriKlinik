@@ -1,8 +1,20 @@
+# Statik dosyalarý hariç tut
 wwwroot/** linguist-vendored
 lib/** linguist-vendored
-*.min.js linguist-vendored
+public/** linguist-vendored
+
+# CSS ve minified dosyalar
+*.css linguist-vendored
 *.min.css linguist-vendored
-**/*.cshtml linguist-vendored
-wwwroot/**/*.html linguist-vendored
-lib/**/*.html linguist-vendored
-public/**/*.html linguist-vendored
+*.js linguist-vendored
+*.min.js linguist-vendored
+
+# HTML, cshtml, razor ve benzeri görünüm dosyalarý
+*.html linguist-vendored
+*.cshtml linguist-vendored
+*.razor linguist-vendored
+
+# Diðer istemediðin uzantýlar (örnekler)
+*.json linguist-vendored
+*.xml linguist-vendored
+*.md linguist-vendored
