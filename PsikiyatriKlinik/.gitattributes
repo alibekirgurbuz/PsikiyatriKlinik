@@ -1,4 +1,3 @@
-# Statik dosyalarý hariç tut
 wwwroot/** linguist-vendored
 lib/** linguist-vendored
 *.min.js linguist-vendored
