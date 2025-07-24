@@ -1,0 +1,49 @@
+# Visual Studio
+.vs/
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+build/
+bld/
+[Bb]in/
+[Oo]bj/
+
+# NuGet
+*.nupkg
+packages/
+*.snupkg
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Others
+*.log
+*.tlog
+*.tmp
+*.tmp_proj
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Static files (opsiyonel, yukarýda konuþtuðumuz gibi)
+wwwroot/
+lib/
